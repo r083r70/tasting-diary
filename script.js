@@ -11,8 +11,8 @@ function render()
         itemsListHTML += `
             <div class="row item-row" style="--border: ${index ? 1 : 0}px">
                 <div class="col-1"><button class="delete-button" onclick="deleteItem(${index})"/></div>
-                <div class="col-4">${item.name}</div>
-                <div class="col-2">${months[item.month]} ${item.year}</div>
+                <div class="col-5">${item.name}</div>
+                <div class="col-3">${months[item.month]} ${item.year}</div>
                 <div class="col-3"">
                     <img class="star-image" style="--val: ${item.score * 20}%">
                 </div>

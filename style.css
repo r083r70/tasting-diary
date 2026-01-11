@@ -30,6 +30,8 @@
     appearance: unset;
     height: 20px;
     width: 100px;
+    margin-right: 0;
+    margin-left: auto;
     background: var(--track-bg);
     mask: var(--star);
 }
