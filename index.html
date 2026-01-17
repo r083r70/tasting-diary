@@ -8,28 +8,17 @@
 </head>
 
 <body>
+    <div id="items-list">
+    </div>
 
-    <div class="container">
-        <div id="items-list">
-
-        </div>
-
-        <hr>
-        
-        <form onsubmit="addNewItem(); return false;">
-            <div class="row">
-                <div class="col-1">
-                    <input type="submit" class="submit-button" value="">
-                </div>
-                <div class="col-4">
-                    <input type="text" id="item-name" placeholder="item name">
-                </div>
-                <div class="col">
-                    <input type="range" id="item-score" class="star-range" min="0.0" max="5" step="0.5" value="2.5"
-                        style="--val: 50%" oninput="this.style='--val:'+(this.value*20)+'%'">
-                </div>
-            </div>
-        </form>
+    <hr>
+    <div id="new-item-form" class="inline-div">
+        <button class="use-button" onclick="addNewItem()">
+            <div class="plus-image"\>
+        </button>
+        <input type="text" id="item-name" class="same-line" placeholder="item name">
+        <input type="range" id="item-score" class="same-line-right star-range" min="0.0" max="5" step="0.5" value="2.5"
+            style="--val: 50%" oninput="this.style='--val:'+(this.value*20)+'%'">
     </div>
 </body>
 

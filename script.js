@@ -9,13 +9,12 @@ function render()
     var itemsListHTML = "";
     items.array.forEach((item, index) => {
         itemsListHTML += `
-            <div class="row item-row" style="--border: ${index ? 1 : 0}px">
-                <div class="col-1"><button class="delete-button" onclick="deleteItem(${index})"/></div>
-                <div class="col-5">${item.name}</div>
-                <div class="col-3">${months[item.month]} ${item.year}</div>
-                <div class="col-3"">
-                    <img class="star-image" style="--val: ${item.score * 20}%">
-                </div>
+            <div class="inline-div item-row" style="--border: ${index ? 1 : 0}px">
+                <button class="use-button" onclick="deleteItem(${index})">
+                    <div class="minus-image"\>
+                </button>
+                <p class="same-line">${item.name}</p>
+                <img class="same-line-right star-range star-image" style="--val: ${item.score * 20}%"\>
             </div>`
     });
 
@@ -47,8 +46,8 @@ function addNewItem()
     const year = now.getFullYear();
     const item =
     {
-        name: this['item-name'].value,
-        score: this['item-score'].value,
+        name: document.getElementById('item-name').value,
+        score: document.getElementById('item-score').value,
         month: month,
         year: year,
     };
